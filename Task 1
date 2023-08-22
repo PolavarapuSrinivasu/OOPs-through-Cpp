@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+//Creating Class
+class Calculator{
+	public: //access specifier
+		int a,b; //members variables
+		Calculator(int x,int y) //Constructor (or) Method
+		{
+			this->a=x;
+			this->b=y;
+		}
+		void addition() //members function
+		{
+			cout<<a+b<<endl;
+		}
+		void substraction() //members function
+		{
+			cout<<a-b<<endl;
+		}
+		void multiplication() //members function
+		{
+			cout<<a*b<<endl;
+		}
+		void division() //members function
+		{
+			cout<<a/b<<endl;
+		}
+		void modulo_division() //members function
+		{
+			cout<<a%b<<endl;
+		}
+};
+
+int main()
+{
+	//Creating Object
+	Calculator s1(6,2);
+	//accessing functions
+	s1.addition();
+	s1.substraction();
+	s1.multiplication();
+	s1.division();
+	s1.modulo_division();
+}
