@@ -1,0 +1,50 @@
+
+//DESTRUCTOR://It is a Method 
+			  //It doesn't have any returntype 
+			  //Called automatically when object deleted
+			  //Doesn't contains Parameters
+			  //We use '~' Operator
+			  //**We have to create object using second way by dynamically
+			  //to delete we use delete object_name
+
+#include<iostream>
+using namespace std;
+
+//Creating Class
+class Student{
+private:
+	string *name;
+	int *roll;
+public:
+	Student(string n="None",int r=0)
+	{
+
+		name=new string;
+		roll=new int;
+		*name=n;
+		*roll=r;
+	}
+
+	~Student()
+	{
+		cout<<*name<<endl;
+		delete name;
+		cout<<*roll<<endl;
+		delete roll;
+	}
+
+	void Display()
+	{
+		cout<<"I am "<<name<<" with roll "<<roll<<endl;
+	}
+};
+
+int main()
+{
+	//Creating Objects
+	Student *Sri=new Student("Srinivasu",1);
+	Student *Sai=new Student();
+	delete Sri;
+	delete Sai;
+	return 0;
+}
