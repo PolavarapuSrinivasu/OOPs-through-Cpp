@@ -1,0 +1,32 @@
+//Friend Function
+
+#include<iostream>
+using namespace std;
+
+//Creating Class
+class HumanBeing{
+private:
+	string name;
+	int roll;
+public:
+	HumanBeing(string n,int r)
+	{
+		name=n;
+		roll=r;
+	}
+	friend void display(HumanBeing Sri);
+//friend class student;
+};
+
+	void display(HumanBeing Sri)
+ 	{
+ 		cout<<Sri.name<<" "<<Sri.roll<<" "<<endl;
+	}
+
+int main()
+{
+	//Creating Objects
+	HumanBeing Sri("Srinivasu",1);
+	display(Sri);
+	return 0;
+}
