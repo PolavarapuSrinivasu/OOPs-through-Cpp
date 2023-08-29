@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+//Accessing variables from Private
+//Creating Class
+
+class Student{
+private: //Access Specifier
+	 string name;
+	 int roll;
+public: //Access Specifier 
+		//it is to access the members variables in private
+	
+	void Input(string n,int r) //Read data 
+	{
+		name=n;
+		roll=r;
+	}
+	void Output() //Print Data
+	{
+		cout<<"I am "<<name<<" with roll "<<roll;
+	}
+
+};
+
+int main()
+{
+	Student Sri; //Object Creation
+	Sri.Input("Srinivasu",1); //Passing Parameters
+	Sri.Output();
+	return 0;
+}
