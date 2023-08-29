@@ -1,0 +1,70 @@
+//CONSTRUCTOR://It is a Method 
+			  //It doesn't have any returntype 
+			  //Called automatically when object created
+			  //Also contains Parameters
+
+#include<iostream>
+using namespace std;
+
+//Creating Class
+class Student{
+private:
+	string name;
+	int roll;
+public:
+
+	//METHOD OVERLOADING
+
+	Student(Student &Sri) //Copy Constructor
+	{
+		name=Sri.name;
+		roll=Sri.roll;
+	}
+
+	Student()
+	{
+		name="None";
+		roll=0;
+	}
+
+
+	Student(string n)
+	{
+		name=n;
+		roll=0;
+	}
+
+	Student(int r)
+	{
+		name="None";
+		roll=r;
+	}
+
+	Student(string n,int r)
+	{
+		name=n;
+		roll=r;
+	}
+
+	void Display()
+	{
+		cout<<"I am "<<name<<" with roll "<<roll<<endl;
+	}
+};
+
+int main()
+{
+	//Creating Objects
+	Student Sri("Srinivasu",2);
+	Student Sai("Sai Prabhakar");
+	Student Jogu(9);
+	Student Raj;
+	Student Bad(Sri); //Passing object for Copy Constructor 
+
+	Sri.Display();
+	Sai.Display();
+	Jogu.Display();
+	Raj.Display();
+	Bad.Display();
+	return 0;
+}
