@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+//Creating Class
+
+class HumanBeing{
+public: //Access Specifier
+	string name;
+
+	// void Introduce() //Function
+	// {
+	// 	cout<<"Hi I am "<<name<<endl;
+	// }
+
+	//Declaration of Function Inside the Class
+	void Introduce();
+};
+
+//Definition of Function Outside the Class
+void HumanBeing::Introduce()
+{
+	cout<<"Hi I am "<<HumanBeing::name<<endl;
+}
+
+int main()
+{
+	//Two Ways of Creating Object
+    
+    //1st Way
+	HumanBeing Sri;
+	Sri.name="Srinivasu";
+	Sri.Introduce();
+
+	//2nd Way
+	HumanBeing *Sai=new HumanBeing();
+	Sai->name="Sai Prabhakar";
+	Sai->Introduce();
+
+	//Copying one object details in other object
+	// HumanBeing *Sai=&Sri;
+	// Sai->Introduce();
+	//(*Sai).Introduce(); //'.' operator precedence is more so we use brackets to '*Sai'
+
+	return 0;
+}
