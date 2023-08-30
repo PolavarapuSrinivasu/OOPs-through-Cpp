@@ -1,0 +1,51 @@
+//Static Variable : It maintain a Single copy for all the objects 
+//Static Function : We can access only Static variables in Static Function
+
+#include<iostream>
+using namespace std;
+
+class Human{
+public:
+	static int Human_count;
+	int data=0;
+	Human()
+	{
+		Human_count++;
+	}
+	void display()
+	{
+		//We can access both instance and Static variables in normal function
+
+		cout<<"Human Count "<<Human_count<<" Data "<<data<<endl;
+	}
+	static void print()
+	{
+		//We can access only Static variables in Static Function
+
+		cout<<"Human Count "<<Human_count<<endl;
+	}
+
+
+};
+
+int Human::Human_count=0;
+
+int main()
+{
+	Human S;
+	Human R;
+	Human K;
+	Human P;
+	S.display();
+
+	S.print();
+
+	//We can Access Static Variables in the main function
+
+	cout<<Human::Human_count<<endl;
+
+	//We can't access normal variables and we get error 
+
+	//cout<<Human::data<<endl;
+	return 0;
+}
