@@ -1,0 +1,42 @@
+//Inheritance:Child class acquiring properties from Parent Class
+
+#include<iostream>
+using namespace std;
+
+class Human{
+public:
+	int roll;
+	string name;
+	void setname(string myname)
+	{
+		name=myname;
+	}
+	void setage(int val)
+	{
+		roll=val;
+	}
+};
+
+class Student :public Human{
+public:
+	int id;
+	void setid(int id)
+	{
+		id=id;
+	}
+	void display()
+	{
+		cout<<name<<" "<<roll<<" "<<id<<endl;
+	}
+};
+
+
+int main()
+{
+	Student Srinivasu;
+	Srinivasu.name="Srinivasu";
+	Srinivasu.id=2;
+	Srinivasu.roll=1;
+	Srinivasu.display();
+	return 0;
+}
