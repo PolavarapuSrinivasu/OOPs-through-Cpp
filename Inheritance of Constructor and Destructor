@@ -1,0 +1,42 @@
+//Inheritance
+//Constructor and Destructor
+//---------ORDER----------------
+//--1--Constructor in Base Class
+//--2--Constructor in Derived Class
+//--3--Destructor in Derived Class
+//--4--Destructor in Base Class
+
+#include<iostream>
+using namespace std;
+
+class Person
+{
+public:
+	Person()
+	{
+		cout<<"Constructor of Base Class in called"<<endl;
+	}
+	~Person()
+	{
+		cout<<"Destructor of Base Class in called"<<endl;
+	}
+	
+};
+class Student:public Person
+{
+public:
+	Student()
+	{
+		cout<<"Constructor of Derived Class in called"<<endl;
+	}
+	~Student()
+	{
+		cout<<"Destructor of Derived Class in called"<<endl;
+	}
+};
+
+int main()
+{
+	Student Sri;
+	return 0;
+}
