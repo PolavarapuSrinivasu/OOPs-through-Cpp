@@ -1,0 +1,40 @@
+//Inheritance
+
+#include<iostream>
+using namespace std;
+
+class Person
+{
+public:
+	int date;
+	string name;
+	Person(int d,string n)
+	{
+		date=d;
+		name=n;
+	}
+	
+};
+class Student:public Person
+{
+public:
+	int id;
+	string college;
+	Student(int d,string n,int i,string c):Person(d,n)
+	{
+		id=i;
+		college=c;
+	}
+
+	void display()
+	{
+		cout<<date<<" "<<name<<" "<<id<<" "<<college;
+	}
+};
+
+int main()
+{
+	Student Sri(3,"Srinivasu",1,"Aditya");
+	Sri.display();
+	return 0;
+}
