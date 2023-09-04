@@ -1,0 +1,27 @@
+//Inheritance
+
+#include<iostream>
+using namespace std;
+
+class Person
+{
+public:
+	int date;
+	string name;
+	Person(int date,string name)
+	{
+		this->date=date;
+		this->name=name;
+	}
+	void display()
+	{
+		cout<<date<<" "<<name;
+	}
+
+};
+int main()
+{
+	Person Sri(1,"Srinivasu");
+	Sri.display();
+	return 0;
+}
