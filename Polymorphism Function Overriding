@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//Polymorphism : Same Function doing many jobs
+//Run time Polymorphism
+//Function Overriding
+
+class Human{
+public:
+	void Introduce()
+	{
+		cout<<"Hi I am Human"<<endl;
+	}
+};
+
+class Student:public Human{
+public:
+	void Introduce()
+	{
+		cout<<"Hi I am Student"<<endl;
+	}
+};
+
+void whoisthis(Human &p)
+{
+	p.Introduce();
+}
+
+int main()
+{
+	Student s1;
+	s1.Introduce();
+	whoisthis(s1);
+	return 0;
+}
